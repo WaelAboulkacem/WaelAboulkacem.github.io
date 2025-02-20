@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: url('/top.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(70%); /* Reducimos más el brillo */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #ffde59;
+}
+
+/* Sections */
+section {
+    padding: 160px 20px; /* Aumentamos el padding para más separación */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0.9;
+}
+section:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-top: 100px; /* Bajamos más el título "Projets" */
+    background: linear-gradient(135deg, #ff8c00, #ff2e63);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Section Box Styles */
+.section-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+}
