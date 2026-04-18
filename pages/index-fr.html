@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Portfolio - Wael Aboulkacem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6518d92058.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/index.html" class="lang-btn"><b>EN</b></a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Wael <span>Aboulkacem</span></h1>
+                <p>Étudiant en Ingénierie Informatique | Data Analyst</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photoprofil.png" alt="Photo de Profil">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">À Propos de Moi</h1>
+                    <p>
+                        Actuellement étudiant en cycle d'ingénieur à l'Université de Technologie de Compiègne (UTC), 
+                        je me spécialise en informatique et analyse de données. Mon parcours combine une base solide 
+                        en mathématiques appliquées (MIASHS) avec une expertise technique en analyse de données. 
+                        Passionné par l'extraction d'insights à partir de données complexes, je développe des solutions 
+                        alliant rigueur statistique et développement logiciel.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Formation</p>
+                        <p class="tab-links" onclick="opentab('skills')">Compétences</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2025 - Présent</span><br>Diplôme d'Ingénieur en Informatique<br>Université de Technologie de Compiègne (UTC)</li>
+                            <li><span>2023 - 2025</span><br>Licence MIASHS - Parcours Informatique<br>Université Jean Jaurès (Toulouse)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Programmation</span><br>Python (Pandas, Scikit-learn, TensorFlow), JavaScript, Go, Shell</li>
+                            <li><span>Data Science</span><br>Machine Learning (Supervisé/Non-supervisé), Analyse Statistique</li>
+                            <li><span>Bases de Données</span><br>MySQL, MongoDB, NoSQL, Modélisation Relationnelle</li>
+                            <li><span>Outils</span><br>n8n (Automation), Power BI, Git, VS Code, RStudio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Mes Projets</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-car"></i>
+                    <h2>Prédiction de Prix de Voitures</h2>
+                    <p>Système de Machine Learning avec interface Tkinter pour prédire la valeur des véhicules en temps réel (Scikit-learn, Pandas).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/blob/main/Predict_Price_Car.ipynb" target="_blank">En savoir plus</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>Assistant Email IA</h2>
+                    <p>Automatisation intelligente avec n8n et GPT pour classifier et rédiger des réponses d'emails avec validation humaine.</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/tree/main/AI%20Email%20Assistant" target="_blank">En savoir plus</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Analyse des Ventes Auto</h2>
+                    <p>Analyse exploratoire de données (EDA) pour identifier les tendances du marché automobile (Matplotlib, Seaborn).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/blob/main/Car%20Sales%20Analysis.ipynb" target="_blank">En savoir plus</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                    <h2>Analyse Supply Chain</h2>
+                    <p>Analyse des risques d'inventaire et des goulots d'étranglement logistiques (Power BI & Python).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/tree/main/Industrial%20Data%20Analysis%20%26%20KPI%20Reporting%20Project" target="_blank">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Me Contacter</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> waboulkacem1@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Paris, France</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/WaelAboulkacem" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/waelaboulkacem" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="CvWaelAboulkacem-fr.pdf" download class="btn">Télécharger CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Nom" placeholder="Votre Nom" required>
+                        <input type="email" name="Email" placeholder="Votre Email" required>
+                        <textarea name="Message" rows="6" placeholder="Votre Message"></textarea>
+                        <button type="submit" class="btn btn2">Envoyer</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2026 Wael Aboulkacem. Tous droits réservés.</p>
+        </div>
+    </div>
+
+    <script>
+        // Mismo script que el anterior, solo asegúrate de que el URL sea correcto
+        const scriptURL = 'YOUR_GOOGLE_SHEET_URL_HERE';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message envoyé avec succès !";
+                setTimeout(function(){ msg.innerHTML = ""; }, 5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){ tablink.classList.remove("active-link"); }
+            for(tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-200px"; }
+    </script>
+</body>
+</html>
