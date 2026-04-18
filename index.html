@@ -1,47 +1,167 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Wael Aboulkacem</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/layout/styles/layout.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Portfolio - Wael Aboulkacem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6518d92058.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Wael Aboulkacem</a></h1>
-        <nav>
-            <ul>
-                <li><a href="/pages/projets.html">Projects</a></li>
-                <li><a href="/pages/competences.html">Skills</a></li>
-                <li><a href="/pages/formation.html">Education</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/page/index-fr.html" class="lang-btn"><b>FR</b></a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Wael <span>Aboulkacem</span></h1>
+                <p>Computer Engineering Student | Data Analyst</p>
+            </div>
+        </div>
+    </div>
 
-    <section id="projets">
-        <h2><a href="pages/projets.html">Projects</a></h2>
-        <p>Presentation of My Projects.</p>
-    </section>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photoprofil.png" alt="Profile Photo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Currently an engineering student at the University of Technology of Compiègne (UTC), 
+                        specializing in Computer Science and Data Analysis. My background combines a solid 
+                        foundation in Applied Mathematics (MIASHS) with technical expertise in data analysis. 
+                        Passionate about extracting insights from complex data, I develop solutions 
+                        that blend statistical rigor with software development.
+                    </p>
 
-    <section id="competences">
-        <h2><a href="/pages/competences.html">Skills</a></h2>
-        <p>List of Professional and Technical Skills </p>
-    </section>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
 
-    <section id="formation">
-        <h2><a href="/pages/formation.html">Education</a></h2>
-        <p>Academic Background.</p>
-    </section>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2025 - Present</span><br>Engineering Degree in Computer Science<br>University of Technology of Compiègne (UTC)</li>
+                            <li><span>2023 - 2025</span><br>Bachelor's in Mathematics and Computer Science<br>Jean Jaurès University (Toulouse)</li>
+                        </ul>
+                    </div>
 
-    <section id="contact">
-        <h2><a href="/pages/contact.html">Contact</a></h2>
-    </section>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Python (Pandas, Scikit-learn, TensorFlow), JavaScript, Go, Shell</li>
+                            <li><span>Data Science</span><br>Machine Learning (Supervised/Unsupervised), Statistical Analysis</li>
+                            <li><span>Databases</span><br>MySQL, MongoDB, NoSQL, Relational Modeling</li>
+                            <li><span>Tools</span><br>n8n (Automation), Power BI, Git, VS Code, RStudio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Wael Aboulkacem</p>
-    </footer>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-car"></i>
+                    <h2>Car Price Prediction</h2>
+                    <p>Machine Learning system with a Tkinter interface to predict vehicle value in real-time (Scikit-learn, Pandas).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/blob/main/Predict_Price_Car.ipynb" target="_blank">View Project</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>AI Email Assistant</h2>
+                    <p>Intelligent automation with n8n and GPT to classify and draft email replies with human validation.</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/tree/main/AI%20Email%20Assistant" target="_blank">View Project</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Car Sales Analysis</h2>
+                    <p>Exploratory Data Analysis (EDA) to identify trends in the automotive market (Matplotlib, Seaborn).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/blob/main/Car%20Sales%20Analysis.ipynb" target="_blank">View Project</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                    <h2>Supply Chain Analysis</h2>
+                    <p>Analysis of inventory risks and logistical bottlenecks for a cosmetics company (Power BI & Python).</p>
+                    <a href="https://github.com/WaelAboulkacem/Data-Exploration/tree/main/Industrial%20Data%20Analysis%20%26%20KPI%20Reporting%20Project" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> waboulkacem1@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Paris, France</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/WaelAboulkacem" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/waelaboulkacem" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="CvWaelAboulkacem.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2026 Wael Aboulkacem. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Form Script
+        const scriptURL = 'YOUR_GOOGLE_SHEET_URL_HERE'; // REEMPLAZAR CON TU URL
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!";
+                setTimeout(function(){ msg.innerHTML = ""; }, 5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+        // Tabs and Menu
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){ tablink.classList.remove("active-link"); }
+            for(tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-200px"; }
+    </script>
 </body>
 </html>
